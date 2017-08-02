@@ -4,10 +4,18 @@
 public class Media {
 
     public double calcularMedia(double[] valores) {
-        return 17/3.0;
+        double soma= 0.00;
+        for(int i =0;i<valores.length;i++){
+            soma+=valores[i];
+        }
+        return soma/valores.length;
     }
 
     public double[] convertToDoubleArray(String[] valores) {
-        return new double[]{5, 9, 3};
+        double[] convertedValues = new double[valores.length];
+        for (int i=0;i<valores.length;i++){
+             convertedValues[i] = Double.parseDouble(valores[i]);
+         }
+            return convertedValues;
     }
 }
